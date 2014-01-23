@@ -1,0 +1,4 @@
+<layers>
+    <layer name="ilo.theme"
+           interface="ilo.theme.browser.interfaces.IThemeSpecific" />
+</layers>

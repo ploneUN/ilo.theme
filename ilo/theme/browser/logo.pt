@@ -1,0 +1,31 @@
+<div id="logo-left">
+    <a metal:define-macro="portal_logo"
+       id="portal-logo"
+       accesskey="1"
+       tal:attributes="href string:http://www.ilo.org"
+       i18n:domain="plone">
+        <img src="logo.jpg" alt=""
+        tal:replace="structure view/logo_tag" /></a>
+</div>
+<div id="logo-title">
+
+
+     <span id="ilo-office"><a
+             href="http://www.ilo.org/asia/lang--en/index.htm">ILO Regional Office for Asia and the
+             Pacific</a></span>
+    <br />
+    <span id="site-title"
+        tal:define="portal
+        python:context.portal_url.getPortalObject()"
+        tal:content="portal/title"
+        >
+        ROAP Knowledge Sharing Platform</span>
+    <br />
+    <span id="site-description"
+        tal:define="portal
+        python:context.portal_url.getPortalObject()"
+        tal:content="portal/description"
+        >
+        Asian Decent Work Decade Knowledge Network </span>
+</div>
+<div class="visualClear" ></div>

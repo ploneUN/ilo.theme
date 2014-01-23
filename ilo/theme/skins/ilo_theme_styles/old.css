@@ -1,0 +1,600 @@
+/*
+ *  This is the file where you put your CSS changes. 
+ *  You should preferrably use this and override the 
+ *  relevant properties you want to change here instead 
+ *  of customizing plone.css to survive upgrades. Writing
+ *  your own plone.css only makes sense for very heavy 
+ *  customizations. Useful variables from Plone are 
+ *  documented at the bottom of this file.
+ */
+ 
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/* ILO Blue #37468E
+   UN  Blue #36A7E9
+
+   Other:
+
+   Skin  #DBA55D 
+   Skin Dark: #D7942C
+   Dark Greenish Blue: #39487D
+   Purple #922B96
+   Green #58B036
+   Orange: #DF8E16
+   Light Green: #57C262
+   Ligth Green/Blue: #42BBAE
+   Greyish Green Blue: #7A83A0
+   Dark Pink: #7A83A0
+   Red: #7A83A0
+   Yellow: #E2EC3D
+   Light Pink: #E9ACD1
+*/ 
+
+/* None Plone custom styles */
+
+/* Calendar */
+.ploneCalendar .event {
+background-color:#DEE7EC;
+font-weight:bold;
+margin-top:1em;
+}
+
+.dates { 
+margin: 0.5em 0 0.5em 0;
+}
+
+.ploneCalendar .location {
+font-weight: normal;
+}
+
+#ilo-links {
+font-family: <dtml-var fontFamily>;
+background-color:transparent;
+float:right;
+clear:right;
+height:auto;
+line-height:normal;
+list-style-image:none;
+list-style-type:none;
+white-space:nowrap;
+width: 100%;
+border-bottom: 1px solid #7A83A0;
+margin:0;
+padding:0;
+}
+
+#ilo-links ul{
+border-bottom:0;
+}
+
+#ilo-links li{
+float: right;
+margin: 0 1em 0 1em;
+border-left: 1px solid #7A83A0;
+border-bottom: 0;
+padding-bottom: 1px;
+}
+
+#ilo-links a {
+color: #FFFFFF;
+border-bottom: 0;
+margin-left: 1em;
+text-decoration: none;
+}
+
+#ilo-links a:hover {
+color: #DF8E16;
+}
+
+#site-title  {
+
+    font-family: <dtml-var fontFamily>;
+    font-size:2.5em;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+#ilo-office a {
+    font-size:1.5em;
+    color: #DBA55D;
+    line-height: 150%;
+    text-decoration: none;
+}
+
+#site-description {
+
+    font-family: <dtml-var fontFamily>;
+
+    font-size:1em;
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+
+#logo-left {
+float: left;
+margin: 0;
+}
+
+#logo-title {
+float: left;
+padding-top: 1.5em;
+padding-left: 2em;
+}
+
+/* Listen specific styles */
+
+#forum-thread pre, #message_view pre {
+width: auto;
+}
+
+/* PortletContentWells 2 column styles */
+
+/* ----  Two Column Below Layout ----- */
+
+.portletsBelowContentA, .portletsBelowContentB {
+    float:left;
+    width:50%;
+    }
+
+.portletsBelowContentA .portletWrapper, 
+
+.portletsBelowContentB .portletWrapper, 
+
+.portletsBelowContentC .portletWrapper 
+
+ { padding-right:1em; }
+
+
+
+/* standard elements and Plone css */
+p {
+font-family: <dtml-var fontFamily>;
+line-height:1.5em;
+margin:0 0 0.75em;
+text-align: justify;
+}
+
+table.grid td {
+border-right:1px solid #8CACBB;
+padding:0.25em 0.5em;
+vertical-align: top;
+}
+
+table.listing {
+table-layout:fixed;
+}
+
+#portal-logo a {
+border: none;
+}
+
+#portal-logo img {
+margin: 0;
+padding-left: 1em;
+padding-bottom: 1em;
+border: none;
+}
+
+img.byline-portrait {
+border: 1px solid #000000;
+margin-right: 0.5em;
+-webkit-box-shadow: 2px 2px 2px #888;
+-moz-box-shadow: 2px 2px 2px #888;
+}
+
+#portal-top {
+    background-color: #37468E;
+}
+
+#portal-siteactions li a {
+    font-family: <dtml-var fontFamily>;
+    background-color: transparent;
+    border: none;
+    color: #DBA55D 
+    }
+
+.searchSection {
+    color: #FFFFFF;
+    }
+
+#portal-personaltools-wrapper {
+background-color: #36A7E9;
+border-bottom:1px solid #8CACBB;
+border-top:1px solid #8CACBB;
+clear:both;
+display:block;
+height:1.5em;
+padding: 0.20em;
+}
+
+#portal-personaltools {
+font-family: <dtml-var fontFamily>;
+background-color: #36A7E9;
+border-bottom: 0;
+border-top: 0;
+line-height:1.6em;
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin: 0;
+padding-right: 2em;
+text-align:right;
+text-transform:none;
+float: right;
+}
+
+#portal-personaltools li {
+margin-left: 0;
+padding-left: 0;
+}
+
+#portal-personaltools li a {
+color: #ffffff;
+padding-left: 1em;
+font-size: 110%;
+font-family: <dtml-var fontFamily>;
+}
+
+#portal-breadcrumbs {
+color: #FFFFFF;
+font-family: <dtml-var fontFamily>;
+-webkit-box-shadow: 0 0 5px #000;
+-moz-box-shadow: 0 0 5px #000;
+}
+
+#portal-breadcrumbs a {
+color: #E2EC3D;
+}
+
+#breadcrumbs-you-are-here {
+color: #FFFFFF;
+font-family: <dtml-var fontFamily>;
+font-weight: bold;
+}
+
+
+#portal-column-one .visualPadding {
+padding:1em 0em 0em 1em;
+}
+
+#portal-column-two .visualPadding {
+padding:1em 1em 0em 0em;
+}
+
+.portletHeader a, .managedPortlet .portletHeader a {
+color:#ffffff;
+}
+
+.portletHeader, .managedPortlet .portletHeader {
+font-family: <dtml-var fontFamily>;
+font-weight: bold;
+background-color: #37468E;
+background-image: url('portlet-header-bg.png');
+background-repeat: repeat-x;
+color: #FFFFFF;
+border: none;
+line-height:1.6em;
+padding:0 1em;
+text-transform:none;
+-moz-border-radius-topleft: 0.5em;
+-moz-border-radius-topright: 0.5em;
+border-top-left-radius: 0.5em;
+border-top-right-radius: 0.5em;
+-webkit-border-top-left-radius: 0.5em;
+-webkit-border-top-right-radius: 0.5em;
+}
+
+
+font-family: <dtml-var fontFamily>;
+font-weight: bold;
+background-color: #37468E;
+background-image: url('portlet-header-bg.png');
+color: #FFFFFF;
+border:1px solid #8CACBB;
+line-height:1.6em;
+padding:0 1em;
+text-transform:none;
+}
+
+.portletHeader a, .managedPortlet .portletHeader a {
+font-family: <dtml-var fontFamily>;
+font-weight: bold;
+color: #FFFFFF;
+}
+
+.portletCalendar dt {
+background-color:#37468E;
+border-bottom:medium none;
+font-weight:bold;
+line-height:1.6em;
+text-align:center;
+}
+
+.portletItem a:visited, .portletFooter a:visited {
+font-family: <dtml-var fontFamily>;
+color:#000000;
+}
+
+
+a {
+background-color:transparent;
+color:#000000;
+}
+
+#portal-globalnav {
+text-align: center;
+}
+
+#portal-globalnav li a:hover {
+font-family: <dtml-var fontFamily>;
+font-weight: bold;
+background-color:#DEE7EC;
+border-color:#8CACBB #8CACBB #DEE7EC;
+color:#436976;
+}
+#portal-globalnav li a {
+font-family: <dtml-var fontFamily>;
+font-weight: bold;
+background-color: #36A7E9;
+border-color:#8CACBB;
+border-style:solid solid none;
+border-width:1px;
+color:#FFFFFF;
+height:auto;
+margin: 0 0.2em;
+padding:0 1.25em;
+text-decoration:none;
+text-transform:none;
+font-size: 110%;
+-moz-border-radius-topleft: 0.5em;
+-moz-border-radius-topright: 0.5em;
+border-top-left-radius: 0.5em;
+border-top-right-radius: 0.5em;
+-webkit-border-top-left-radius: 0.5em;
+-webkit-border-top-right-radius: 0.5em;
+-webkit-box-shadow: 2px -1px 5px #2A3156;
+-moz-box-shadow: 2px -1px 5px #2A3156;
+}
+
+
+#portal-globalnav li.selected a {
+font-family: <dtml-var fontFamily>;
+font-weight: bold;
+background-color: #DBA55D;
+border-color:#8CACBB #8CACBB #DEE7EC;
+border-style:solid;
+border-width:1px;
+color:#000000;
+}
+
+#portal-footer {
+font-family: <dtml-var fontFamily>;
+background-color: transparent;
+border-bottom: none;
+border-top:none;
+float:none;
+line-height:1.2em;
+text-align:center;
+margin: 0;
+padding: 0;
+clear: both;
+}
+
+#portal-footer p {
+font-family: <dtml-var fontFamily>;
+margin:0.25em 0;
+text-align:center;
+}
+
+.documentByLine {
+    color:#333333;
+    font-size:90%;
+    font-weight:normal;
+}
+
+/* Authoring CSS */
+
+.contentViews li a:hover {
+background-color:#CDE2A7;
+color:#000000;
+}
+.contentViews .selected a {
+background-color:#CDE2A7;
+border-bottom:1px solid #CDE2A7;
+color:#000000;
+}
+.contentViews li a {
+background-color:transparent;
+border:1px solid #74AE0B;
+color:#000000;
+height:auto;
+line-height:normal;
+margin-right:0.5em;
+padding:0 1em;
+text-decoration:none;
+text-transform:none;
+z-index:1;
+}
+
+.contentActions a {
+color:#000000;
+cursor:pointer;
+text-decoration:none;
+}
+
+#footer-portlets {
+font-size: 90%;
+border-top: 5px solid #333;
+background: #37468E;
+overflow: hidden;
+width: 100%;
+}
+
+#footer-portlets .portletHeader {
+font-size: 110%;
+color:#DF8E16;
+background: transparent;
+border-top: none;
+border-right: none;
+border-left: none;
+border-bottom: 1px solid;
+}
+
+#footer-portlets .portletHeader a, .managedPortlet .portletHeader a {
+color:#DF8E16;
+font-weight:bold;
+}
+
+#footer-portlets .portletItem a {
+border: none;
+color: #FFFFFF;
+}
+
+#footer-portlets .portlet {
+border-bottom: none;
+background-color: transparent;
+background-image: none;
+padding: 0 1em 0 1em;
+color: #ffffff;
+}
+
+#footer-portlets .even {
+background-color: transparent;
+border:none;
+}
+
+#footer-portlets .odd {
+background-color: transparent;
+border:none;
+}
+
+#footer-portlets .portletItemDetails {
+color: #36A7E9;
+background-color: transparent;
+}
+
+#footer-portlets .portletFooter a, #footer-portlets  .portletFooter {
+color: #FFFFFF;
+background-color: transparent;
+border-left: none;
+border-right: none;
+}
+
+
+/* --- Six Column Footer Layout ---- */
+.FooterPortletA, .FooterPortletB, .FooterPortletC,  .FooterPortletD,  .FooterPortletE,  .FooterPortletF {
+float: left;
+width: 20%;
+}
+
+/* Additional color classes */
+
+.deepskyblue {
+background: #00BFFF;
+}
+
+.lightsteelblue {
+background: #B0C4DE;
+}
+
+.palegoldenrod {
+background: #EEE8AA;
+}
+
+.lightgoldenrod {
+background: #FAFAD2;
+}
+
+.khaki {
+background: #F0E68C;
+}
+
+.darkkhaki {
+background: #BDB76B;
+}
+
+.whitesmoke {
+background: #F5F5F5;
+}
+
+/* </dtml-with> */
+
+/* DOCUMENTATION ON PRE-DEFINED PROPERTIES FROM PLONE */
+
+ /* You can insert colors and other variables from Plone's 
+    base_properties by doing:
+    
+    & dtml-variableName ; (without the spaces, excluded here to not make it render)
+    
+    Example:
+    
+    myLink {
+        color: & dtml-fontColor ;   (again, without the spaces)
+    }
+ 
+   This means you can generate your own elements that use Plone's defaults,
+   and respect any customizations people have done. See base_properties for
+   the default values.
+ 
+   These are the available properties:
+   
+   logoName - the file name of the portal logo
+   
+   fontFamily - the font family used for all text that is not headers
+   
+   fontBaseSize - the base font size that everything is calculated from
+   
+   fontColor - the main font color
+   
+   fontSmallSize - used for various elements like buttons and discreet text
+   
+   discreetColor - the font color of discreet text
+
+   backgroundColor - the background color 
+   
+   linkColor - the color used on normal links
+
+   linkActiveColor - color used on active links
+
+   linkVisitedColor - color used on visited links
+   
+   borderWidth - the width of most borders in Plone
+   
+   borderStyle - the style of the border lines, normally solid
+   
+   borderStyleAnnotations - style of border lines on comments etc
+   
+   globalBorderColor - the border color used on the main tabs, the portlets etc
+   
+   globalBackgroundColor - background color for the selected tabs, portlet headings etc
+   
+   globalFontColor - the color of the font in the tabs and in portlet headings
+   
+   headingFontFamily - font family for h1/h2/h3/h4/h5/h6 headlines
+   
+   contentViewBorderColor - the content view tabs border color
+   
+   contentViewBackgroundColor - the content view tabs background color
+   
+   contentViewFontColor - the font color used in the content view tabs
+   
+   inputFontColor - the font color used for input elements
+   
+   textTransform - whether to lowercase text in portlets, tabs etc.
+   
+   evenRowBackgroundColor - the background color of even rows in listings
+   
+   oddRowBackgroundColor - the background color of even rows in listings
+   
+   notifyBorderColor - border color of notification elements like the status message, the calendar focus
+   
+   notifyBackgroundColor - background color of notification elements like the status message, the calendar focus
+   
+   helpBackgroundColor - background color of information pop-ups (currently not used)
+          
+ */
+
+

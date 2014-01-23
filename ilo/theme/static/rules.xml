@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- Head: title -->
+    <replace theme="/html/head/title" content="/html/head/title" />
+    <replace theme="//*[@id='logo']/h1" content="//*[@id='content']/h1"/>
+
+
+    <append theme="/html/head" content="/html/head/link | /html/head/style | /html/head/script" />
+    <prepend content="/html/head/base" theme="/html/head" />
+
+
+    <!-- The default theme, used for standard Plone web pages -->
+
+
+    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+
+
+    <!-- Rules applying to a standard Plone web page -->
+    <rules css:if-content="#visual-portal-wrapper">
+
+        <!-- Add meta tags -->
+        <drop content="/html/head/meta[@http-equiv='X-UA-Compatible']" />
+        <drop theme="/html/head/meta" />
+        <prepend content="/html/head/meta" theme="/html/head" />
+        <prepend theme="/html/head">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        </prepend>
+
+        <!-- Copy style, script and link tags in the order they appear in the content -->
+
+
+        <!-- Copy over the id/class attributes on the body tag.
+             This is important for per-section styling -->
+        <merge attributes="class" css:content="body" css:theme="body" />
+        <copy attributes="id dir" css:content="body" css:theme="body" />
+
+        <!-- portal top for header -->
+
+        <replace css:theme="#portal-searchbox"
+            css:content="#portal-searchbox"/>
+
+        <replace css:theme="#portal-logo > img"
+            css:content="#portal-logo > img"/>
+
+         <replace css:theme="#portal-globalnav"
+            css:content="#portal-globalnav"/>
+
+
+         <replace css:theme="#portal-personaltools-wrapper"
+             css:content="#portal-personaltools-wrapper"/>
+         <before css:theme="#portal-personaltools-wrapper"
+             css:content="#plonesocialsuite-navigation"/>
+         <before css:theme-children="#portal-header"
+             css:content="#xmpp-viewlet"/>
+
+
+        <!-- portal body -->
+
+        <replace css:theme-children="section" css:content="#portal-columns" />
+
+
+        <!-- portal footer -->
+
+        <replace css:theme-children="#footer-portlets"
+            css:content="#footer-portlets" />
+        <replace css:theme="#portal-footer" css:content="#portal-footer" />
+        <append css:theme="footer" css:content="#chatpanel"/>
+
+        <!--       <replace css:theme="div#scripts" content="/html/head/script" />-->
+
+
+    </rules>
+    
+</rules>
+
+

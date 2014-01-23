@@ -1,0 +1,673 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	
+	Eric Meyer					:: http://ericmeyer.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+	
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}									
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+img,
+object,
+embed {max-width: 100%;}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+ 
+/* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {outline: none;}
+
+small {font-size: 85%;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;} 
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label, 
+input[type=button], 
+input[type=submit], 
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button {width: auto; overflow: visible;}
+ 
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover */
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; }  
+
+
+
+/* Ok, this is where the fun starts.
+-------------------------------------------------------------------------------*/
+
+/* new Linux- and Windows-friendly sans-serif font stack: http://mky.be/fontstack */
+body {font: 13px Helmet, Freesans, sans-serif;}
+
+
+/* using local fonts? make sure to read up on Paul Irish's 
+	Bulletproof @font-face syntax: http://mky.be/font-face/bulletproof/ */
+
+/* we like off-black for text */
+body, select, input, textarea {color: #333;}
+
+a {color: #03f;}
+a:hover {color: #69f;}
+
+/* Custom text-selection colors (remove any text shadows: twitter.com/miketaylr/status/12228805301) */
+::-moz-selection{background: #fcd700; color: #fff; text-shadow: none;}
+::selection {background: #fcd700; color: #fff; text-shadow: none;} 
+
+/*	j.mp/webkit-tap-highlight-color */
+a:link {-webkit-tap-highlight-color: #fcd700;} 
+
+ins {background-color: #fcd700; color: #000; text-decoration: none;}
+mark {background-color: #fcd700; color: #000; font-style: italic; font-weight: bold;}
+
+/* Content */
+
+div#portal-column-content { border-right: 1px dotted #ddd; padding-right: 5px;
+                            border-left: 1px dotted #ddd; padding-left: 5px; }
+
+
+div#content div#parent-fieldname-description.documentDescription  {
+    margin-bottom: 20px;
+}
+ 
+
+div#content-core div.kuputab-container ul.kuputab-selectors {
+    display: block;
+    list-style-type: none;
+    margin: 0 0 -1em;
+    padding: 0;
+    position: relative;
+    text-align: center;
+}
+
+html.js body.template-document_view section div#portal-columns.row div#portal-column-content.cell div.documentEditable div#content div#content-core div#parent-fieldname-text.kssattr-atfieldname-text div.kuputab-container ul.kuputab-selectors li#kuputab-selector-0.kuputab-selector {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+ul.kuputab-selectors li#kuputab-selector {
+
+ display: inline;
+    margin: 0;
+    padding: 0; 
+
+}
+
+
+div#content-core li.kuputab-selector {
+    display: inline-block;
+}
+
+div#content-core li.kuputab-selector a {
+    background: none repeat scroll 0 0 White;
+    border-bottom: 1px solid #8CACBB;
+    border-left: 1px dotted #8CACBB;
+    border-top: 1px solid #8CACBB;
+    margin: 0;
+    padding: 0.125em 0.75em;
+    text-decoration: none;
+}
+ div#content-core   li.kuputab-selector a:visited {
+    color: #436976;
+}
+ div#content-core   li.kuputab-selector-first a {
+    border-left: 1px solid #8CACBB;
+}
+ div#content-core   li.kuputab-selector-last a {
+    border-right: 1px solid #8CACBB;
+}
+ div#content-core   li.kuputab-selector a.selected {
+    background: none repeat scroll 0 0 #DEE7EC;
+}
+ div#content-core   li.kuputab-selector a:hover {
+    background: none repeat scroll 0 0 #DEE7EC;
+}
+ div#content-core   .kuputab-content {
+    border: 1px solid #8CACBB;
+    padding: 1em;
+}
+div#content-core    .kuputab-content.hidden {
+    display: none;
+}
+
+
+div#portal-title {
+    display: table;
+    padding: 20px 0;
+}
+
+div#portal-title a#portal-logo {
+    display: table-cell;
+    padding-right: 20px;
+}
+
+div#portal-title h1 { font-size: 24px; color: #8997D2; line-height: 1em;}
+div#portal-title h2 { font-size: 16px; text-decoration: none; line-height: 1.5em; color: #666; padding-left:5px; font-weight:bold;}
+
+hgroup { display: table-cell;
+         vertical-align: top;
+         padding: 10px;}
+
+/* Navigation bar */
+
+ul#portal-globalnav {
+    background: url("../images/nav_bg.png") repeat-x scroll left bottom transparent;
+    border-color: #DEDEDE #DEDEDE #A3A3A3;
+    border-radius: 5px 5px 5px 5px;
+    border-style: solid;
+    border-width: 1px;
+    clear: both;
+    font-weight: bold;
+}
+
+
+div#portal-header ul#portal-globalnav li {
+ padding-top: 5px;
+ text-align: center;
+}
+
+div#portal-header ul#portal-globalnav li#portaltab-home.plain a {
+    padding-right: 0px;
+}
+
+div#portal-header ul#portal-globalnav li a
+{ background-color: transparent;
+  color: #37468E; 
+  border-right:1px solid #ccc;
+  padding: 1em;
+}
+div#portal-header ul#portal-globalnav li a:hover
+{ background-color: transparent;
+  color: #75ad0a;}
+
+
+div#portal-header ul#portal-globalnav li.selected a
+{ background-color:transparent;
+  color: #75ad0a;}
+
+/* personal tools */
+
+div#portal-personaltools-wrapper ul#portal-personaltools {
+    background: none;
+    border-bottom: none;
+    width: 100%;
+    text-align: right;
+}
+
+div#portal-personaltools-wrapper ul#portal-personaltools li {
+    padding-left: 8px;
+}
+
+/* Portlets */
+
+/* Online Users */
+
+img.byline-portrait {
+border: 1px solid #000000;
+margin-right: 0.5em;
+vertical-align: middle;
+-webkit-box-shadow: 2px 2px 2px #888;
+-moz-box-shadow: 2px 2px 2px #888;
+box-shadow: 2px 2px 2px #888;
+}
+
+span.documentAuthor img.byline-portrait {
+margin-bottom: 10px;
+}
+
+/*Collective Multiview Portlest */
+
+dl.portletCollection dd.portletItem a.tile span {
+      border: none;
+      color: black;
+      font-weight: bold;
+      font-size: 10pt;
+}
+
+dl.portletCollection dd.portletItem p.documentByline {
+    color: #666;
+    font-size: 10px;
+
+}
+
+dl.portletCollection dd.portletItem a.tile {
+      border: none;
+      color: black;
+      font-weight: bold;
+      font-size: 10pt;
+}
+
+div.multiview-event-date {
+    color: #666;
+    font-size: 10px;
+
+}
+
+/* Front Page Event Portlet */
+/* Should be replaced by collective multiview template */
+
+div#portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f696e7472616e65742f6e65772d66726f6e742d706167650a7570636f6d696e672d6576656e7473.portletWrapper dl.portlet dd dl dt span.documentByLine {
+display: none;
+}
+
+div#portletwrapper-706c6f6e652e6c656674636f6c756d6e0a636f6e746578740a2f696e7472616e65742f6e65772d66726f6e742d706167650a6c61746573742d6d697373696f6e2d7265706f727473.portletWrapper dl.portlet dd dl dd span.description {
+    display:none;
+}
+
+/* Mission Reports Statistics Portlet */
+
+dl#mission-reports-statistics.portlet dd.portletItem {
+    padding: 0;
+}
+
+dl#mission-reports-statistics.portlet dd.portletItem table.grid {
+    margin-top: 5px;
+}
+
+dl#mission-reports-statistics.portlet dd.portletItem div h2 {
+    font-weight: bold;
+}
+
+dl#mission-reports-statistics.portlet dd.portletItem table.grid tbody tr td {
+    text-align: center;
+}
+
+dl#mission-reports-statistics.portlet dd.portletItem table.grid tbody tr th {
+    color: #000;
+}
+
+dl#mission-reports-statistics.portlet dd.portletItem h2 {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+dl#mission-reports-statistics.portlet dd.portletItem p.discreet {
+ color: #aaa;
+}
+
+/* Mission Reports Collection Portlet */
+
+div#portletwrapper-436f6e74656e7457656c6c506f72746c6574732e42656c6f77506f72746c65744d616e61676572310a636f6e746578740a2f696e7472616e65742f7265706f7274732f6d697373696f6e2d7265706f7274732f6d697373696f6e2d7265706f7274730a6c61746573742d6d697373696f6e2d7265706f727473.portletWrapper .portletCollection {
+text-align: left;
+}
+
+/* General Portlet Styling */
+
+#content a:link, dl.portlet a:link {
+        border-bottom: none;
+        color: #205C90;
+       }
+
+dl.portletStaticText dd.portletItem ul li {
+
+    list-style: square inside;
+}
+
+/* Collection Portlets */
+
+
+dl.portlet dd dl dt span.documentByLine {
+ font-size: 10px;
+ color: #666;
+}
+
+
+#portal-columns dl.portlet dt.portletHeader, div.portletAssignments div.portletHeader
+{
+font-size: 14px;
+background: #EFEFE6;
+font-weight: bold;
+border-bottom: 1px solid #DDDDDD;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+color: #333;
+}
+
+#portal-columns dl.portlet dt.portletHeader a {
+color: #333;
+}
+
+
+div#portal-columns.row .portletWrapper dl.portlet dd dl dt {
+    font-size: 13px;
+    background: none;
+}
+
+#portal-columns dl.portlet dd.portletItem {
+    background: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px dotted #ccc;
+    text-align: left;
+    }
+
+
+#portal-columns .portletCollection dd {
+    background: none;
+    border-left:none;
+    border-right: none;
+    font-size: 12px;
+    border-bottom: 1px dotted #ccc;
+}
+
+#portal-columns dl.portlet dt {
+    background: none;
+    border-left:none;
+    border-right: none;
+    border-bottom: none;
+}
+
+#portal-columns dd.portletFooter { border-bottom: none; }
+
+
+dl.portlet dt {
+    border: none;
+    background: none;
+}
+
+/* documentActions */
+
+#content div.documentActions  {
+    margin-top: 10px;
+    text-align: right;
+}
+
+#content div.documentActions ul li a {
+    border-bottom:none;
+    color: #000;
+}
+#content div.documentActions ul li {
+    display: inline-block;
+	color: #000000;
+	padding: 2px 5px;
+	background: -moz-linear-gradient(
+		top,
+		#ffffff 0%,
+		#ffffff 50%,
+		#ccc);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ffffff),
+		color-stop(0.50, #ffffff),
+		to(#ccc));
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 3px rgba(255,255,255,1);
+}
+/* Footer */
+
+footer div.row {
+background: none repeat scroll 0 0 #EFEFE6; 
+border-top: 1px solid #666;
+font-size: 90%;
+overflow: hidden;
+width: 100%;
+}
+
+#footer-portlets .portletHeader {
+background: none repeat scroll 0 0 transparent;
+border-bottom: 1px dotted #ccc;
+color: #333;
+font-size: 110%;
+}
+
+div#footer-portlets div#footer-portlets div.FooterPortletE div#portletwrapper-436f6e74656e7457656c6c506f72746c6574732e466f6f746572506f72746c65744d616e61676572350a636f6e746578740a2f696e7472616e65740a636f6d6d756e69746965732d6f662d7072616374696365.portletWrapper dl.portlet dt.portletHeader span a.tile {
+color: #333;
+}
+
+#footer-portlets .portletItem a {
+    border: medium none;
+    color: #333;
+}
+
+#footer-portlets .portletStaticText ul {
+    list-style-type: square outside;
+    margin: 0.5em 0 0 1.5em;
+    color: #333;
+}
+
+div#footer-portlets div.FooterPortletE div#portletwrapper-436f6e74656e7457656c6c506f72746c6574732e466f6f746572506f72746c65744d616e61676572350a636f6e746578740a2f696e7472616e65740a636f6d6d756e69746965732d6f662d7072616374696365.portletWrapper dl.portlet dd.portletItem p {
+    color: #333;
+}
+
+div#footer-portlets div.FooterPortletE div#portletwrapper-436f6e74656e7457656c6c506f72746c6574732e466f6f746572506f72746c65744d616e61676572350a636f6e746578740a2f696e7472616e65740a636f6d6d756e69746965732d6f662d7072616374696365.portletWrapper dl.portlet dd.portletFooter {
+    text-align: right;
+    margin-right: 25px;
+}
+
+div#footer-portlets div.FooterPortletE div#portletwrapper-436f6e74656e7457656c6c506f72746c6574732e466f6f746572506f72746c65744d616e61676572350a636f6e746578740a2f696e7472616e65740a636f6d6d756e69746965732d6f662d7072616374696365.portletWrapper dl.portlet dd.portletFooter span a.tile  {
+color: #333;
+
+}
+
+div#portal-footer { display: block; }
+
+.FooterPortletA, .FooterPortletB, .FooterPortletC, .FooterPortletD, .FooterPortletE, .FooterPortletF {
+    float: left;
+    width: 20%;
+}
+
+footer .copyright, footer .copyright a {
+    font-size: 10px;
+    text-align: center;
+    color: #333;
+}
+
+div#footer-portlets p.manageFooterPortletsLink {
+    background: none repeat scroll 0 0 #DDDDDD;
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    font-size: 80%;
+    margin: 0 auto 1em;
+    padding: 0.25em 0.5em;
+    text-align: center;
+}
+
+div#footer-portlets dl.portletStaticText dd.portletItem ul li {
+
+    list-style: square outside;
+}
+
+
+div#footer-portlets dl.portlet {font-size: 12px; }
+div#footer-portlets dl.portlet p {margin-bottom: 0; }
+div#footer-portlets dl.portlet dd.portletItem, dl.portlet dd.portletFooter, dl.portletError dd {
+    padding: 5px;
+}
+
+
+/* Member Profiles */
+
+img.portraitPhoto {
+    border: 1px solid #333;
+    box-shadow: 2px 2px 5px #ccc;
+}
+
+div.card img {
+    border: 1px solid #333;
+    box-shadow: 2px 2px 5px #ccc;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+
+/* Plone Booking */
+
+#booking_form_ajax_errors {
+    background: #FFBABA;
+    color: #000;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+}
+
+div.bookablePopupContainer form#periodicity-form div.field div p {
+    color: #555;
+    font-size: 14px;
+    margin: 5px 0 5px 0;
+}
+
+
+
+
+/* Print styles!
+-------------------------------------------------------------------------------*/
+@media print {
+
+    div#footer-portlets { display: none; }
+
+}
+
+
+/* Media queries!
+-------------------------------------------------------------------------------*/
+
+/* Consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+	
+		
+}
+
+@media all and (orientation: portrait) {
+	
+}
+
+@media all and (orientation: landscape) {
+	
+}
+
+.alphatab-tabs {
+    text-align:center;
+}
+
+.alphatab-tabs li {
+    display:inline-block !important;
+    padding:5px;
+    border:1px solid #ccc;
+}
+
+.alphatab-panes {
+    border:1px solid #ccc;
+}
+
+#portal-logo {
+    width:166px;
+}
+
+.template-base_edit.portaltype-missionreport #portal-column-one,
+.template-base_edit.portaltype-missionreport #portal-column-two {
+   display:none;
+}
+
+.template-base_edit.portaltype-missionreport #portal-column-content {
+   width:96% !important;
+   left:20px !important;
+   margin-left:0px !important;
+}
+
+.portlet table {
+    width:100%;
+}
+
+#chatpanel #toggle-controlbox {
+    border-top-right-radius:0;
+    border-top-left-radius:0;
+    border-bottom-right-radius:4px;
+    border-bottom-left-radius:4px;
+    bottom:auto;
+    top:0;
+    border-bottom:1px solid #c3c3c3;
+    border-top:none;
+}
+
+a#toggle-online-users:after {
+    content:none !important;
+}

@@ -1,0 +1,102 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="ilo.theme">
+
+  <!-- 'ILO Theme' Zope 3 browser layer -->
+  <interface
+      interface=".interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      name="ILO Theme"
+      />
+
+  <!-- Multiview adapters -->
+  
+  <!-- Viewlets registration -->
+  <!-- Zope 3 browser resources -->
+
+  <!-- Resource directory for images -->
+  <browser:resourceDirectory
+      name="ilo.theme.images"
+      directory="images"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- Resource directory for stylesheets -->
+  <browser:resourceDirectory
+      name="ilo.theme.stylesheets"
+      directory="stylesheets"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+ <!-- The logo -->
+    <browser:viewlet
+        name="plone.logo"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class="plone.app.layout.viewlets.common.LogoViewlet"
+        layer=".interfaces.IThemeSpecific"
+        template="logo.pt"
+        permission="zope2.View" 
+        />
+
+
+  <browser:page
+      name="list.html"
+      for="Products.ATContentTypes.content.topic.ATTopic"
+      permission="zope2.View"
+      class=".events.ILOEventListingView"
+      attribute="allEvents"/>
+
+  <browser:page
+      name="list.html"
+      for="Products.ATContentTypes.content.folder.ATFolder"
+      permission="zope2.View"
+      class=".events.ILOEventListingView"
+      attribute="allEvents"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+
+  <browser:page
+      name="upcoming.html"
+      for="Products.ATContentTypes.content.topic.ATTopic"
+      permission="zope2.View"
+      class=".events.ILOEventListingView"
+      attribute="upcomingEvents"/>
+
+  <browser:page
+      name="upcoming.html"
+      for="Products.ATContentTypes.content.folder.ATFolder"
+      permission="zope2.View"
+      class=".events.ILOEventListingView"
+      attribute="upcomingEvents"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+
+  <browser:page
+      name="past.html"
+      for="Products.ATContentTypes.content.topic.ATTopic"
+      permission="zope2.View"
+      class=".events.ILOEventListingView"
+      attribute="pastEvents"/>
+
+  <browser:page
+      name="past.html"
+      for="Products.ATContentTypes.content.folder.ATFolder"
+      permission="zope2.View"
+      class=".events.ILOEventListingView"
+      attribute="pastEvents"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+    <browser:viewlet
+        name="plone.belowcontenttitle.documentbyline"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+        class="plone.app.layout.viewlets.content.DocumentBylineViewlet"
+        template="document_byline.pt"
+        permission="zope2.View"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+</configure>
